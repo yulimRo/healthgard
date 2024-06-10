@@ -54,10 +54,6 @@ public class IndexController {
 	public String registTrainer() {
 		return "trainer/registTrainerPage";
 	}
-	
-	@RequestMapping("/updateTrainer")
-	public String updateTrainer() {
-		return "trainer/updateTrainerPage";
-	}
+
 
 }

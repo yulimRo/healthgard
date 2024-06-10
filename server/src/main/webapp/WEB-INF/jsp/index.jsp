@@ -16,10 +16,12 @@
 	</c:if>
 </div>
 <c:if test="${userName != null}">
-<div class="col-md-12 mlr-3 text-right">
-	<a href="/registTrainer" class="d-inline p-2 bg-dark text-white btn active" role="button"> 트레이너정보 등록 </a>
-</div>
-<div class="col-md-12">
+<form class="col-md-12 mlr-3 justify-content-end form-inline">
+	<a href="/noticeList" class="col-md-2 mr-2  d-inline p-2 bg-dark text-white btn active" role="button"> 공지사항 조회</a>
+	<a href="/registTrainer" class="col-md-2  d-inline p-2 bg-dark text-white btn active" role="button"> 트레이너정보 등록 </a>
+</form>
+
+<div class="col-md-12 mt-3">
 <!-- 목록 출력 영역 -->
 <table class="table table-horizontal table-bordered  mr-3">
 	<thead class="thead-strong">
@@ -44,14 +46,14 @@
 	<c:if test="${trainers != null}">
 		<!-- posts 라는 List를 순회-->
 		<c:forEach var="trainer" items="${trainers}">
-       		<tr>
+				<tr>
 				<td>${trainer.id}</td>
 				<td>${trainer.name}</td>
 				<td>${trainer.dept}</td>
 				<td>${trainer.updateDate}</td>
 				<td><button class="btn btn-info" id="trainerSelectBtn" >수정</button></td>
 			</tr>
-   		</c:forEach>
+		</c:forEach>
 	</c:if>
 	</tbody>
 </table>
